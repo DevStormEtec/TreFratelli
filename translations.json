@@ -1,0 +1,38 @@
+{
+  "it": {
+    "header.title": "Cantina e Ristorante Tre Fratelli",
+    "nav.storia": "Storia",
+    "nav.vini": "Vini",
+    "nav.visite": "Visite",
+    "nav.contatto": "Contatto",
+    "hero.h2": "🍷 Cantina e Ristorante Tre Fratelli",
+    "hero.p": "Un ristorante e cantina di famiglia che celebra la tradizione enogastronomica della Valtellina, offrendo vini artigianali e piatti tipici preparati com ingredienti locali.",
+    "historia.h2": "Nostra Storia",
+    "historia.p1": "La Cantina e Ristorante Tre Fratelli vide la luce nel 1925, a Tirano, una piccola città della splendida Valtellina, in Lombardia.",
+    "vinhos.h2": "I Nostri Vini",
+    "vinho1.title": "Nebbiolo delle Alpi – Riserva Tre Fratelli",
+    "vinho1.p": "Un Nebbiolo di montagna dal carattere deciso e profondo, espressione autentica dei vigneti terrazzati della Valtellina.",
+    "visitas.h2": "Visitate la Nostra Cantina",
+    "visitas.p": "Scoprite la nostra storia, degustate i vini artigianali e ammirate i panorami delle Alpi e dei vigneti terrazzati che circondano Tirano.",
+    "footer.addr": "📍 Via S. Stefano, 55 — 28087 Tirano (SO), Italia",
+    "footer.copy": "© 2025 Cantina e Ristorante Tre Fratelli — Tutti i diritti riservati"
+  },
+  "pt": {
+    "header.title": "Cantina e Restaurante Tre Fratelli",
+    "nav.storia": "História",
+    "nav.vini": "Vinhos",
+    "nav.visite": "Visitas",
+    "nav.contatto": "Contato",
+    "hero.h2": "🍷 Cantina e Restaurante Tre Fratelli",
+    "hero.p": "Um restaurante e adega de família que celebra a tradição enogastronômica da Valtellina, oferecendo vinhos artesanais e pratos típicos preparados com ingredientes locais.",
+    "historia.h2": "Nossa História",
+    "historia.p1": "A Cantina e Restaurante Tre Fratelli nasceu em 1925, em Tirano, uma pequena cidade da linda Valtellina, na Lombardia.",
+    "vinhos.h2": "Nossos Vinhos",
+    "vinho1.title": "Nebbiolo das Alpes – Reserva Tre Fratelli",
+    "vinho1.p": "Um Nebbiolo de montanha com caráter decidido e profundo, expressão autêntica dos vinhedos em terraço da Valtellina.",
+    "visitas.h2": "Visite Nossa Cantina",
+    "visitas.p": "Descubra nossa história, prove nossos vinhos artesanais e admire as paisagens alpinas e os vinhedos em terraço ao redor de Tirano.",
+    "footer.addr": "📍 Via S. Stefano, 55 — 28087 Tirano (SO), Itália",
+    "footer.copy": "© 2025 Cantina e Restaurante Tre Fratelli — Todos os direitos reservados"
+  }
+}

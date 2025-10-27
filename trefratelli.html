@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tre Fratelli | Autentica Tradizione Italiana dal 1925</title>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lora&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		/* ADICIONADO: Rolagem suave */
+		html {
+			scroll-behavior: smooth;
+		}
+
+		:root {
+			--vinho: #5a1e1e;
+			--dourado: #d4af37;
+			--creme: #fdfbf7;
+			--texto: #3b2a22;
+		}
+
+		body {
+			font-family: 'Lora', serif;
+			background-color: var(--creme);
+			color: var(--texto);
+			line-height: 1.7;
+		}
+
+		header {
+			background-color: var(--vinho);
+			color: #fff;
+			text-align: center;
+			padding: 1rem;
+			position: sticky;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1000;
+			box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+		}
+
+		header h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.3rem;
+			letter-spacing: 1px;
+			margin-bottom: 0.5rem;
+		}
+
+		nav {
+			margin-top: 0.5rem;
+		}
+
+		nav a {
+			color: #f6e9d7;
+			text-decoration: none;
+			margin: 0 15px;
+			font-weight: bold;
+			transition: color 0.3s;
+		}
+
+		nav a:hover {
+			color: var(--dourado);
+		}
+
+		#hero {
+			/* CORRIGIDO: Caminho da imagem */
+			background-image: url('imagens/proprieta.png'); 
+			background-size: cover;
+			background-position: center center;
+			color: #fff;
+			text-align: center;
+			padding: 10rem 2rem 8rem;
+			position: relative;
+			margin-top: 0px;
+		}
+
+		#hero::after {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; width: 100%; height: 100%;
+			background: rgba(0,0,0,0.4);
+		}
+
+		#hero h2 {
+			position: relative;
+			font-size: 2.8rem;
+			font-family: 'Playfair Display', serif;
+			margin-bottom: 1rem;
+			z-index: 1; /* Garante que o texto fique sobre o overlay */
+		}
+
+		#hero p {
+			position: relative;
+			font-size: 1.2rem;
+			max-width: 700px;
+			margin: 0 auto;
+			z-index: 1; /* Garante que o texto fique sobre o overlay */
+		}
+
+		section {
+			max-width: 1100px;
+			margin: 5rem auto;
+			padding: 0 2rem;
+		}
+
+		/* ADICIONADO: Barra separadora preta para seções */
+		section:not(#hero) {
+			border-top: 2px solid #000;
+			margin-top: 0;
+			padding-top: 5rem; /* Substitui a margem-top original de 5rem */
+		}
+
+
+		section h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 2rem;
+			border-left: 5px solid var(--vinho);
+			padding-left: 10px;
+			margin-bottom: 1.5rem;
+		}
+
+		#historia p {
+			font-size: 1.1rem;
+			text-align: justify;
+		}
+		
+		/* Adiciona um pouco de espaço entre os parágrafos da história */
+		#historia p + p, #historia h3 + p {
+			margin-top: 1rem;
+		}
+
+		#historia h3 {
+			margin-top: 1.5rem;
+			font-family: 'Playfair Display', serif;
+			color: var(--vinho);
+		}
+
+		.vinhos-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			justify-content: center;
+		}
+
+		.vinho {
+			background: #fff;
+			border: 1px solid #e6e6e6;
+			border-radius: 10px;
+			width: 300px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			transition: transform 0.3s, box-shadow 0.3s;
+			overflow: hidden; /* Garante que a imagem se ajuste ao border-radius */
+		}
+
+		.vinho:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+		}
+
+		.vinho img {
+			width: 100%;
+			height: 220px; /* Adiciona uma altura fixa para consistência */
+			object-fit: cover; /* Faz a imagem cobrir a área sem distorcer */
+			border-radius: 10px 10px 0 0;
+		}
+
+		.vinho-content {
+			padding: 1rem;
+		}
+
+		.vinho-content h3 {
+			color: var(--vinho);
+			font-family: 'Playfair Display', serif;
+			margin-bottom: 0.5rem;
+		}
+
+		.vinho-content p {
+			font-size: 0.95rem;
+			color: #444;
+		}
+
+		#visitas {
+			text-align: center;
+			background: linear-gradient(to right, #f6e9d7, #fdfbf7);
+			padding: 4rem 2rem;
+			border-radius: 10px;
+		}
+
+		#visitas p {
+			max-width: 700px;
+			margin: 1rem auto;
+		}
+
+		#visitas a {
+			display: inline-block;
+			margin-top: 1rem;
+			background-color: var(--vinho);
+			color: #fff;
+			text-decoration: none;
+			padding: 0.8rem 1.8rem;
+			border-radius: 4px;
+			transition: background 0.3s;
+		}
+
+		#visitas a:hover {
+			background-color: var(--dourado);
+			color: #000;
+		}
+
+		footer {
+			background-color: var(--texto);
+			color: #f6e9d7;
+			text-align: center;
+			padding: 3rem 1rem;
+			/* AJUSTADO: Barra separadora preta para o rodapé */
+			margin-top: 0;
+			padding-top: 4rem; /* Substitui a margem-top original de 4rem */
+			border-top: 2px solid #000;
+		}
+
+		footer p {
+			margin-bottom: 0.5rem;
+		}
+
+		footer small {
+			color: #c9b89a;
+		}
+
+		@media (max-width: 768px) {
+			#hero h2 {
+				font-size: 2rem;
+			}
+
+			.vinhos-container {
+				flex-direction: column;
+				align-items: center;
+			}
+			
+			.vinho {
+				width: 100%; /* Faz os cards ocuparem a largura total em mobile */
+				max-width: 350px; /* Limita para não ficar muito largo */
+			}
+
+			nav a {
+				display: inline-block;
+				margin: 0.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>Cantina e Ristorante Tre Fratelli</h1>
+		<nav>
+			<a href="#historia">Storia</a>
+			<a href="#vinhos">Vini</a>
+			<a href="#visitas">Visite</a>
+			<a href="#contato">Contatto</a>
+		</nav>
+	</header>
+
+	<section id="hero">
+		<h2>🍷 Cantina e Ristorante Tre Fratelli</h2>
+		<p>Un ristorante e cantina di famiglia che celebra la tradizione enogastronomica della Valtellina, offrendo vini artigianali e piatti tipici preparati com ingredienti locali.</p>
+	</section>
+
+	<section id="historia">
+		<h2>Nostra Storia</h2>
+		<p>La Cantina e Ristorante Tre Fratelli vide la luce nel 1925, a Tirano, una piccola città della splendida Valtellina, in Lombardia.</p>
+		<p>Tutto ebbe inizio com Giovanni Ferraro, patriarca della famiglia, che ereditò un piccolo vigneto sulle colline di San Stefano. Insieme ai suoi tre figli — Marco, Paolo e Lorenzo — iniziò a coltivare uve nebbiolo (Chiavennasca) per creare un vino autenticamente artigianale.</p>
+
+		<h3>🌿 Decenni di Sfide</h3>
+		<p><strong>Anni ’30:</strong> La crisi economica e l’instabilità politica misero in difficoltà la famiglia. Teresa, la madre, aprì una piccola cucina per i viaggiatori della ferrovia di Tirano, unendo vino e cucina locale.</p>
+		<p><strong>Seconda Guerra Mondiale:</strong> La produzione fu quasi interrotta; molte botti vennero nascoste in grotte di pietra per proteggerle dai saccheggi.</p>
+		<p><strong>Anni ’60–’70:</strong> Com l’arrivo del turismo alpino, i nipoti rinnovarono la struttura mantenendo viva la tradizione familiare.</p>
+		<p><strong>Anni ’80:</strong> Un nuovo período di crisi economica mise a rischio l’attività, ma Alessandro, bisnipote di Giovanni, introdusse innovazioni grazie ai suoi studi di enologia a Milano.</p>
+
+		<h3>🍇 Oggi</h3>
+		<p>Nel 2025 la cantina celebra un secolo di storia. La quarta generazione della famiglia Ferraro continua a     custodire la stessa passione per l’ospitalità, il vino e la buona tavola.</p>
+	</section>
+
+	<section id="vinhos">
+		<h2>I Nostri Vini</h2>
+		<div class="vinhos-container">
+			<div class="vinho">
+				<img src="imagens/facciata.png" alt="Faixada do Ristorante Tre Fratelli">
+				<div class="vinho-content">
+					<h3>Nebbiolo delle Alpi – Riserva Tre Fratelli</h3>
+					<p>Un Nebbiolo di montagna dal carattere deciso e profondo, espressione autentica dei vigneti terrazzati della Valtellina.</p>
+				</div>
+			</div>
+			<div class="vinho">
+				<img src="imagens/bottiglie.png" alt="Garrafas de vinho Tre Fratelli">
+				<div class="vinho-content">
+					<h3>Valtellina Rosso – Cuore di Tirano</h3>
+					<p>Un vino elegante e armonioso, che racchiude l’essenza del territorio e accompagna perfettamente i piatti tipici locali.</p>
+				</div>
+			</div>
+			<div class="vinho">
+				<img src="imagens/cantina.png" alt="Cantina com barris de carvalho">
+				<div class="vinho-content">
+					<h3>Sforzato della Nonna Teresa</h3>
+					<p>Dedicato a Teresa, la fondatrice della cucina di famiglia: uno sforzato intenso, profumato e ricco di tradizione.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="visitas">
+		<h2>Visitate la Nostra Cantina</h2>
+		<p>Scoprite la nostra storia, degustate i vini artigianali e ammirate i panorami delle Alpi e dei vigneti terrazzati che circondano Tirano.</p>
+		<a href="#contato">Prenota la visita</a>
+	</section>
+
+	<footer id="contato">
+		<p>📍 Via S. Stefano, 55 — 28087 Tirano (SO), Italia</p>
+		<p>Nel cuore della Valtellina, tra vigneti e montagne alpine.</p>
+		<small>© 2025 Cantina e Ristorante Tre Fratelli — Tutti i diritti riservati</small>
+	</footer>
+
+
+</body>
+</html>
