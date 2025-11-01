@@ -48,21 +48,25 @@ async function aplicarTraducoes() {
 	if (histH3[0]) histH3[0].textContent = t['historia.h3_1'];
 	if (histH3[1]) histH3[1].textContent = t['historia.h3_2'];
 
-	// vini (3 elementi)
-	const vinhoTitles = document.querySelectorAll('.vinho-content h3');
-	const vinhoParas = document.querySelectorAll('.vinho-content p');
-	if (vinhoTitles[0]) vinhoTitles[0].textContent = t['vinho1.title'];
-	if (vinhoParas[0]) vinhoParas[0].textContent = t['vinho1.p'];
-	if (vinhoTitles[1]) vinhoTitles[1].textContent = t['vinho2.title'];
-	if (vinhoParas[1]) vinhoParas[1].textContent = t['vinho2.p'];
-	if (vinhoTitles[2]) vinhoTitles[2].textContent = t['vinho3.title'];
-	if (vinhoParas[2]) vinhoParas[2].textContent = t['vinho3.p'];
+	// vini (3 elementi) - selettori e chiavi rinominati in italiano
+	const vinoTitles = document.querySelectorAll('.vino-contenuto h3');
+	const vinoParas = document.querySelectorAll('.vino-contenuto p');
+	if (vinoTitles[0]) vinoTitles[0].textContent = t['vino1.titolo'];
+	if (vinoParas[0]) vinoParas[0].textContent = t['vino1.p'];
+	if (vinoTitles[1]) vinoTitles[1].textContent = t['vino2.titolo'];
+	if (vinoParas[1]) vinoParas[1].textContent = t['vino2.p'];
+	if (vinoTitles[2]) vinoTitles[2].textContent = t['vino3.titolo'];
+	if (vinoParas[2]) vinoParas[2].textContent = t['vino3.p'];
 
-	// visite
-	const visitasH2 = document.querySelector('#visitas h2');
-	const visitasP = document.querySelector('#visitas p');
-	if (visitasH2) visitasH2.textContent = t['visitas.h2'];
-	if (visitasP) visitasP.textContent = t['visitas.p'];
+	// h2 della sezione vini (chiave italiana)
+	const viniH2 = document.querySelector('#vini h2');
+	if (viniH2) viniH2.textContent = t['vini.h2'];
+
+	// visite (id e chiavi italiane)
+	const visiteH2 = document.querySelector('#visite h2');
+	const visiteP = document.querySelector('#visite p');
+	if (visiteH2) visiteH2.textContent = t['visite.h2'];
+	if (visiteP) visiteP.textContent = t['visite.p'];
 
 	// footer
 	const footerP = document.querySelectorAll('footer p');
@@ -72,11 +76,11 @@ async function aplicarTraducoes() {
 	if (footerSmall) footerSmall.textContent = t['footer.copy'];
 
 	// bottone di traduzione: title + alt immagine + etichetta visibile
-	const botao = document.querySelector('.botao-traducao');
-	if (botao && t['button.title']) botao.title = t['button.title'];
-	const botImg = document.querySelector('.botao-traducao img');
+	const bottone = document.querySelector('.bottone-traduzione');
+	if (bottone && t['button.title']) bottone.title = t['button.title'];
+	const botImg = document.querySelector('.bottone-traduzione img');
 	if (botImg && t['button.imgAlt']) botImg.alt = t['button.imgAlt'];
-	const botLabel = document.querySelector('.botao-traducao .lang-label');
+	const botLabel = document.querySelector('.bottone-traduzione .etichetta-lingua');
 	if (botLabel && t['button.label']) botLabel.textContent = t['button.label'];
 }
 
@@ -89,6 +93,6 @@ function alternarIdioma() {
 // inizializza il bottone
 document.addEventListener('DOMContentLoaded', () => {
 	aplicarTraducoes();
-	const btn = document.querySelector('.botao-traducao');
+	const btn = document.querySelector('.bottone-traduzione');
 	if (btn) btn.addEventListener('click', alternarIdioma);
 });

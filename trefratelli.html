@@ -92,7 +92,7 @@
 			font-size: 2.8rem;
 			font-family: 'Playfair Display', serif;
 			margin-bottom: 1rem;
-			z-index: 1; /* testo fica na frente */
+			z-index: 1; /* testo davanti */
 		}
 
 		#hero p {
@@ -139,14 +139,14 @@
 			color: var(--vinho);
 		}
 
-		.vinhos-container {
+		.vini-container {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 2rem;
 			justify-content: center;
 		}
 
-		.vinho {
+		.vino {
 			background: #fff;
 			border: 1px solid #e6e6e6;
 			border-radius: 10px;
@@ -156,46 +156,46 @@
 			overflow: hidden;
 		}
 
-		.vinho:hover {
+		.vino:hover {
 			transform: translateY(-5px);
 			box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 		}
 
-		.vinho img {
+		.vino img {
 			width: 100%;
 			height: 220px;
 			object-fit: cover;
 			border-radius: 10px 10px 0 0;
 		}
 
-		.vinho-content {
+		.vino-contenuto {
 			padding: 1rem;
 		}
 
-		.vinho-content h3 {
+		.vino-contenuto h3 {
 			color: var(--vinho);
 			font-family: 'Playfair Display', serif;
 			margin-bottom: 0.5rem;
 		}
 
-		.vinho-content p {
+		.vino-contenuto p {
 			font-size: 0.95rem;
 			color: #444;
 		}
 
-		#visitas {
+		#visite {
 			text-align: center;
 			background: linear-gradient(to right, #f6e9d7, #fdfbf7);
 			padding: 4rem 2rem;
 			border-radius: 10px;
 		}
 
-		#visitas p {
+		#visite p {
 			max-width: 700px;
 			margin: 1rem auto;
 		}
 
-		#visitas a {
+		#visite a {
 			display: inline-block;
 			margin-top: 1rem;
 			background-color: var(--vinho);
@@ -206,7 +206,7 @@
 			transition: background 0.3s;
 		}
 
-		#visitas a:hover {
+		#visite a:hover {
 			background-color: var(--dourado);
 			color: #000;
 		}
@@ -231,7 +231,7 @@
 		}
 
 		/* bottone traduzione */
-		.botao-traducao {
+		.bottone-traduzione {
 			position: absolute;
 			top: 12px;
 			right: 12px;
@@ -250,19 +250,19 @@
 			font-weight: 600;
 			backdrop-filter: blur(4px);
 		}
-		.botao-traducao img {
+		.bottone-traduzione img {
 			width: 20px;
 			height: 20px;
 			object-fit: cover;
 			border-radius: 50%;
 			display: block;
 		}
-		.botao-traducao .lang-label {
+		.bottone-traduzione .etichetta-lingua {
 			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 			font-size: 0.95rem;
 			color: #fff;
 		}
-		.botao-traducao:hover {
+		.bottone-traduzione:hover {
 			background-color: var(--dourado);
 			color: #000;
 			border-color: rgba(0,0,0,0.15);
@@ -273,12 +273,12 @@
 				font-size: 2rem;
 			}
 
-			.vinhos-container {
+			.vini-container {
 				flex-direction: column;
 				align-items: center;
 			}
 			
-			.vinho {
+			.vino {
 				width: 100%;
 				max-width: 350px;
 			}
@@ -288,17 +288,17 @@
 				margin: 0.5rem;
 			}
 
-			.botao-traducao {
+			.bottone-traduzione {
 				top: 8px;
 				right: 8px;
 				height: 32px;
 				padding: 0 8px;
 			}
-			.botao-traducao img {
+			.bottone-traduzione img {
 				width: 18px;
 				height: 18px;
 			}
-			.botao-traducao .lang-label {
+			.bottone-traduzione .etichetta-lingua {
 				font-size: 0.85rem;
 			}
 		}
@@ -310,15 +310,15 @@
 		<h1>Cantina e Ristorante Tre Fratelli</h1>
 		<nav>
 			<a href="#historia">Storia</a>
-			<a href="#vinhos">Vini</a>
-			<a href="#visitas">Visite</a>
-			<a href="#contato">Contatto</a>
+			<a href="#vini">Vini</a>
+			<a href="#visite">Visite</a>
+			<a href="#contatto">Contatto</a>
 		</nav>
 
-		<!-- bottone traduzione -->
-		<button class="botao-traducao" title="Passa all'inglese" aria-label="cambia lingua">
+		<!-- bottone traduzione semplice -->
+		<button class="bottone-traduzione" title="Passa all'inglese" aria-label="cambia lingua">
 			<img src="imagens/tradutor.png" alt="translate" />
-			<span class="lang-label">Italiano</span>
+			<span class="etichetta-lingua">Italiano</span>
 		</button>
 	</header>
 
@@ -342,26 +342,27 @@
 		<p>Nel 2025 la cantina celebra un secolo di storia. La quarta generazione della famiglia Ferraro continua a     custodire la stessa passione per l’ospitalità, il vino e la buona tavola.</p>
 	</section>
 
-	<section id="vinhos">
+	<!-- sostituito: id vinhos -> id vini, classe vini-container, vino, vino-contenuto -->
+	<section id="vini">
 		<h2>I Nostri Vini</h2>
-		<div class="vinhos-container">
-			<div class="vinho">
+		<div class="vini-container">
+			<div class="vino">
 				<img src="imagens/facciata.png" alt="facciata del ristorante tre fratelli">
-				<div class="vinho-content">
+				<div class="vino-contenuto">
 					<h3>Nebbiolo delle Alpi – Riserva Tre Fratelli</h3>
 					<p>Un Nebbiolo di montagna dal carattere deciso e profondo, espressione autentica dei vigneti terrazzati della Valtellina.</p>
 				</div>
 			</div>
-			<div class="vinho">
+			<div class="vino">
 				<img src="imagens/bottiglie.png" alt="bottiglie di vino tre fratelli">
-				<div class="vinho-content">
+				<div class="vino-contenuto">
 					<h3>Valtellina Rosso – Cuore di Tirano</h3>
 					<p>Un vino elegante e armonioso, che racchiude l’essenza del territorio e accompagna perfettamente i piatti tipici locali.</p>
 				</div>
 			</div>
-			<div class="vinho">
+			<div class="vino">
 				<img src="imagens/cantina.png" alt="cantina con botti di rovere">
-				<div class="vinho-content">
+				<div class="vino-contenuto">
 					<h3>Sforzato della Nonna Teresa</h3>
 					<p>Dedicato a Teresa, la fondatrice della cucina di famiglia: uno sforzato intenso, profumato e ricco di tradizione.</p>
 				</div>
@@ -369,13 +370,15 @@
 		</div>
 	</section>
 
-	<section id="visitas">
+	<!-- visite: id rinominato in visite -> visite (italiano: visite) -->
+	<section id="visite">
 		<h2>Visitate la Nostra Cantina</h2>
 		<p>Scoprite la nostra storia, degustate i vini artigianali e ammirate i panorami delle Alpi e dei vigneti terrazzati che circondano Tirano.</p>
-		<a href="#contato">prenota una visita</a>
+		<a href="#contatto">prenota una visita</a>
 	</section>
 
-	<section id="contato">
+	<!-- contatto: id rinominato in contatto -->
+	<section id="contatto">
 		<h2>Contatto</h2>
 		<p>per informazioni e prenotazioni: <a href="mailto:info@trefratelli.example">info@trefratelli.example</a> oppure chiama +39 0342 123456</p>
 	</section>
