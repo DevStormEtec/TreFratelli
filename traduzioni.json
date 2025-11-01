@@ -36,7 +36,7 @@
     "footer.copy": "© 2025 Cantina e Ristorante Tre Fratelli — Tutti i diritti riservati",
     "button.title": "Passa all'inglese",
     "button.imgAlt": "Tradurre / Translate",
-    "button.label": "Italiano"
+    "button.label": "English"
   },
   "en": {
     "header.title": "Tre Fratelli Winery & Restaurant",
@@ -75,6 +75,6 @@
     "footer.copy": "© 2025 Tre Fratelli Winery & Restaurant — All rights reserved",
     "button.title": "Switch to Italian",
     "button.imgAlt": "Translate / Tradurre",
-    "button.label": "English"
+    "button.label": "Italiano"
   }
 }
